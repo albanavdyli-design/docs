@@ -10,11 +10,30 @@
   "icons": {
     "library": "lucide"
   },
+  "background": {
+    "color": {
+      "light": "#ffffff", 
+      "dark": "#181818"
+    }
+  },
+  "appearance": {
+    "default": "light",
+    "strict": false
+  },
+  "fonts": {
+    "heading": {
+      "family": "Space Grotesk"
+    },
+    "body": {
+      "family": "Space Grotesk"
+    }
+  },
   "favicon": "/favicon.svg",
   "navigation": {
    "products": [
     {
-      "product": "Docs Homepage",
+      "product": "Homepage",
+      "icon": "grip",
       "pages": [
         "index"
       ]
@@ -25,7 +44,15 @@
       "icon": "house-plus",
       "tabs": [
         {
-          "tab": "KODE OS Quickstart"
+          "tab": "KODE OS Quickstart",
+          "groups": [
+            {
+              "group": "Quickstart",
+              "pages": [
+                "kode-os/Quickstart/quickstart"
+              ]
+            }
+          ]
         },
         {
           "tab": "Sites & Dashboards",
@@ -41,6 +68,9 @@
         {
           "tab": "Building BI"
         }, 
+        {
+          "tab": "Events"
+        },
         {
           "tab": "FTT & FDD",
           "groups": [
@@ -59,10 +89,10 @@
           ]
         }, 
         {
-          "tab": "Schedules"
+          "tab": "Mass Write"
         }, 
         {
-          "tab": "Events"
+          "tab": "Schedules"
         }
       ]
     },

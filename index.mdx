@@ -1,212 +1,119 @@
 ---
-title: "Kode Labs"
 mode: "custom"
 ---
 
-export const LandingPageDeveloperCards = () => {
-  return <CardGroup cols={3}>
-            <Card title="Developer Documentation" icon="code" href="https://developers.glean.com">
-            Learn how to build custom applications and integrations with Glean's API and SDKs
-            </Card>
-        </CardGroup>;
-};
+export function openSearch() {
+  document.getElementById('search-bar-entry').click();
+}
 
-export const LandingPageStandardCards = () => {
-  return <CardGroup cols={3}>
-            <Card title="Get Started" icon="plug" href="/get-started/welcome">
-                Set up Glean for your organization
-            </Card>
-            <Card title="Connectors" icon="plug" href="/connectors/about">
-                Connect all of your existing applications to discover all of your company's knowledge in one place
-            </Card>
-            <Card title="Admin Guide" icon="book-open" href="/administration/about">
-                Use the admin console to configure and manage Glean for your organization
-            </Card>
-            <Card title="Security & Architecture" icon="shield-check" href="/security">
-                Review Glean's security and infrastructure features as well as architecture diagrams
-            </Card>
-            <Card title="Troubleshooting" icon="bug" href="/troubleshooting/home">
-                Find solutions to common issues and errors, get in touch with support
-            </Card>
-            <Card title="Admin Hub" icon="users-rectangle" href="https://community.glean.com/categories/admin-hub?utm_source=community-search&amp;utm_medium=organic-search&amp;utm_term=admin%20hub">
-                Visit the private community hub for Glean admins 
-            </Card>
-        </CardGroup>;
-};
+export function openSearch() {
+  document.getElementById('search-bar-entry').click();
+}
 
-export const LandingPageHeroCards = () => {
-  return <CardGroup cols={3}>
-            <Card title="Learn About Glean" icon="graduation-cap" href="/user-guide/about/what-is-glean">
-                Learn what Glean is and how it can help you
-            </Card>
-            <Card title="Search in Glean" icon="magnifying-glass" href="/user-guide/basics/how-to-search-in-glean">
-                Learn how to search for information in Glean
-            </Card>
-            <Card title="Glean Chat" icon="message-bot" href="/user-guide/assistant/glean-chat">
-                Access Glean Assistant’s generative AI capabilities through an intuitive chat interface
-            </Card>
-            <Card title="Install the browser extension" icon="browsers" href="/user-guide/apps/installing-the-browser-extension">
-                Access Glean Assistant’s generative AI capabilities through an intuitive chat interface
-            </Card>
-            <Card title="Ask the Community" icon="handshake" href="https://community.glean.com/">
-                Get help and advice from your peers in the Gleaniverse
-            </Card>
-        </CardGroup>;
-};
+<div className="relative w-full flex items-center justify-center" style={{ height: '24rem', overflow: 'hidden'}}>
+  <div id="background-div" class="absolute inset-0" style={{backgroundImage: "url('https://mintlify-assets.b-cdn.net/attback.png')", backgroundSize: '100%', backgroundPosition: 'center', height: "24rem"}} />
 
-export const LandingPageCardGroup = ({children}) => {
-  return <div className="w-full">
-            <div className="h-full items-center">
-                <div className="max-w-8xl mx-auto w-full">
-                    <div className="flex lg:px-12 mx-4 lg:mx-0">
-                        <div className="flex-1 py-8">
-                            {children}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>;
-};
-
-export const LandingPageGettingStartedCard = ({src}) => {
-  return <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary dark:hover:border-primary-light transition-colors relative overflow-hidden">
-            <div class="absolute inset-0">
-                <img src={src} alt="" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-black/30"></div>
-            </div>
-
-
-            <div class="flex flex-col md:flex-row md:items-center gap-4 relative z-10">
-                <div class="flex-1">
-                    <h3 class="text-lg font-bold text-white mb-2">👋 Are you a new Glean customer?</h3>
-                    <p class="text-white">
-                        Let's guide you through the initial setup process!
-                    </p>
-                </div>
-
-                <div class="flex-shrink-0">
-                    <a class="group" href="/get-started/welcome">
-                        <button class="flex items-center space-x-1 font-medium px-4 py-1 bg-white text-black rounded-xl group-hover:opacity-[0.9] shadow-lg">
-                            <span>Get Started</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="w-3 h-3">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>;
-};
-
-export const GleanSearchHero = ({placeholder = "Search for answers..."}) => {
-  return <input type="text" className="glean-search-box--hero glean-search-trigger" id="glean-search-box" aria-label="Search..." placeholder={placeholder} />;
-};
-
-export const Banner = ({searchComponent}) => {
-  const gradientStyle = {
-    backgroundColor: 'transparent',
-    backgroundImage: 'linear-gradient(270deg, #739cf4, #343ced)'
-  };
-  return <div className="w-full h-96 relative overflow-hidden" style={gradientStyle}>
-
-            <div className="absolute inset-0 z-0">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 323" className="w-full h-auto absolute bottom-0" preserveAspectRatio="none" enableBackground="new 0 0 1920 323" xmlSpace="preserve">
-                    <polygon fill="#ffffff" style={{
-    fillOpacity: 0.05
-  }} points="-0.5,322.5 -0.5,121.5 658.3,212.3" />
-                    <polygon fill="#ffffff" style={{
-    fillOpacity: 0.1
-  }} points="-2,323 1920,323 1920,-1" />
-                </svg>
-            </div>
-
-            <div className="relative z-10 h-full flex items-center">
-                <div className="max-w-8xl mx-auto w-full">
-                    <div className="flex lg:px-12 mx-4 lg:mx-0">
-                        <div className="flex-1 py-8">
-                            <h1 className="text-3xl text-white font-bold hero-title">Hello, how can we help?</h1>
-                            <h2 className="mt-1 text-white hero-subtitle">Learn how to get started with Glean</h2>
-                            <h3 className="hero-example-search-terms--container"> <span id="example-term" class="hero-example-search-terms"></span> </h3>
-                            <div className="search-container">
-                                <form onsubmit="return false;">
-                                    <div class="search-wrapper">
-                                        {searchComponent}
-                                        <button type="button" class="search-button" aria-label="Search">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>;
-};
-
-<Banner searchComponent={<GleanSearchHero />} />
-
-***
-
-<LandingPageCardGroup>
-  <div className="landing-section-headings">
-    <h1 className="landing-section-title">Knowledge Base</h1>
-    <h2 className="landing-section-subtitle">The Glean docs site is your one-stop shop for answers and advice for the entire Glean platform. Welcome!</h2>
-  </div>
-
-  <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-primary dark:hover:border-primary-light transition-colors relative overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="https://mintcdn.com/glean-5786559b/1v8VopG7Y8qlR0ki/images/general/get-started-bg.png?fit=max&auto=format&n=1v8VopG7Y8qlR0ki&q=85&s=3dd52782d401c3829d8fb337df132222" alt="" class="w-full h-full object-cover" data-og-width="1500" width="1500" data-og-height="500" height="500" data-path="images/general/get-started-bg.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/glean-5786559b/1v8VopG7Y8qlR0ki/images/general/get-started-bg.png?w=280&fit=max&auto=format&n=1v8VopG7Y8qlR0ki&q=85&s=5774650945d8f9df17adc4bb25272b7e 280w, https://mintcdn.com/glean-5786559b/1v8VopG7Y8qlR0ki/images/general/get-started-bg.png?w=560&fit=max&auto=format&n=1v8VopG7Y8qlR0ki&q=85&s=0877e1ad4e738ca646619300f514867b 560w, https://mintcdn.com/glean-5786559b/1v8VopG7Y8qlR0ki/images/general/get-started-bg.png?w=840&fit=max&auto=format&n=1v8VopG7Y8qlR0ki&q=85&s=f5fa0f79ae6c0572a0cd5e43e61f41fd 840w, https://mintcdn.com/glean-5786559b/1v8VopG7Y8qlR0ki/images/general/get-started-bg.png?w=1100&fit=max&auto=format&n=1v8VopG7Y8qlR0ki&q=85&s=838bf30cc4b4d82d5279a2ad1add35ee 1100w, https://mintcdn.com/glean-5786559b/1v8VopG7Y8qlR0ki/images/general/get-started-bg.png?w=1650&fit=max&auto=format&n=1v8VopG7Y8qlR0ki&q=85&s=0fcb35403d04c34fee14912ded24542c 1650w, https://mintcdn.com/glean-5786559b/1v8VopG7Y8qlR0ki/images/general/get-started-bg.png?w=2500&fit=max&auto=format&n=1v8VopG7Y8qlR0ki&q=85&s=da27bee5ec955a80476e8245b6e55dc0 2500w" />
-
-      <div class="absolute inset-0 bg-black/30" />
+  <div style={{ position: 'absolute', textAlign: 'center', padding: '0 1rem', width: '90%'}}>
+    <div
+      className="text-white dark:text-gray-200"
+      style={{
+     fontWeight: '700',
+     fontSize: '50px',
+     margin: '0',
+    }}
+    >
+      Welcome to KODE Docs
     </div>
 
-    <div class="flex flex-col md:flex-row md:items-center gap-4 relative z-10">
-      <div class="flex-1">
-        <h3 class="text-lg font-bold text-white mb-2">👋 Are you a new Glean customer?</h3>
+    <p
+      className="prose text-white dark:prose-invert"
+      style={{
+      marginTop: '1rem',
+     fontWeight: '400',
+     fontSize: '16px',
+    }}
+    >
+      Manage buildings, the smart way. 
+    </p>
 
-        <p class="text-white">
-          Let's guide you through the initial setup process!
-        </p>
-      </div>
+    <div className="flex items-center justify-center" style={{ width: '100%' }}>
+      <button
+        type="button"
+        className="hidden w-full lg:flex items-center text-sm leading-6 py-1.5 pl-2.5 pr-3 shadow-sm text-gray-400 dark:text-white/50 bg-background-light dark:bg-background-dark dark:brightness-[1.1] dark:ring-1 dark:hover:brightness-[1.25] ring-1 ring-gray-400/20 hover:ring-gray-600/25 dark:ring-gray-600/30 dark:hover:ring-gray-500/30 focus:outline-primary border border-gray-100"
+        id="home-search-entry"
+        style={{
+      marginTop: '2rem',
+      width: '40%',
+      padding: '0.4rem',
+    }}
+        onClick={openSearch}
+      >
+        <svg
+          className="h-4 w-4 ml-1.5 flex-none bg-gray-500 hover:bg-gray-600 dark:bg-white/50 dark:hover:bg-white/70"
+          style={{
+        marginRight: '0.5rem',
+       maskImage:
+         'url("https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg")',
+       maskRepeat: 'no-repeat',
+       maskPosition: 'center center',
+      }}
+        />
 
-      <div class="flex-shrink-0">
-        <a class="group" href="/get-started/welcome">
-          <button class="flex items-center space-x-1 font-medium px-4 py-1 bg-white text-black rounded-xl group-hover:opacity-[0.9] shadow-lg">
-            <span>Get Started</span>
+        Search or ask
+      </button>
+    </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="w-3 h-3">
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </button>
-        </a>
-      </div>
+    <div className="flex items-center justify-center">
+      <a style={{ marginTop: '2rem' }} href="/documentation/usm-anywhere" className="text-white text-sm font-medium flex items-center">
+        Explore the docs
+
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline-block ml-1" viewBox="0 0 20 20" fill="currentColor">
+          <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+        </svg>
+      </a>
     </div>
   </div>
-</LandingPageCardGroup>
+</div>
 
-<LandingPageCardGroup>
-  <h2 className="landing-cardgroup-heading">Glean Users</h2>
-  <p className="landing-cardgroup-subtitle">Are you a Glean user? Check out these resources to get started.</p>
+<div
+  style={{
+  marginTop: '0rem',
+  marginBottom: '8rem',
+  maxWidth: '70rem',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  paddingLeft: '1.25rem',
+  paddingRight: '1.25rem'
+}}
+>
+  <h2
+    className="text-gray-900 dark:text-gray-200 text-center"
+    style={{
+    marginTop: '2rem',
+    marginBottom: '1rem',
+    fontWeight: '300',
+    fontSize: '1.5rem'
+  }}
+  >
+    Learn how to get started with Kode 👍 <span className="text-primary dark:text-primary-light"></span>
+  </h2>
 
-  <LandingPageHeroCards />
-</LandingPageCardGroup>
+  <CardGroup cols={4}>
+    <Card title="KODE OS" icon="house-plus" iconType="solid" href="/documentation/usm-anywhere">
+      Cloud-based security monitoring platform that unifies threat detection, incident response, and compliance across all environments
+    </Card>
 
-<LandingPageCardGroup>
-  <h2 className="landing-cardgroup-heading">Administrators</h2>
-  <p className="landing-cardgroup-subtitle">Find the resources you need to deploy Glean, connect it to your data, and manage everything.</p>
+    <Card title="myMSI™" icon="server" iconType="solid" href="/documentation/usm-central">
+      Unified security monitoring console for MSPs and enterprises to manage multiple USM deployments, enabling centralized threat detection across cloud and on-prem environments
+    </Card>
 
-  <LandingPageStandardCards />
-</LandingPageCardGroup>
+    <Card title="Launchpad" icon="shield-halved" iconType="solid" href="/documentation/tdr-for-gov">
+      FedRAMP-authorized threat detection platform for government, based on USM, deployed on AWS GovCloud with Moderate ATO
+    </Card>
 
-<LandingPageCardGroup>
-  <h2 className="landing-cardgroup-heading">Developers</h2>
-  <p className="landing-cardgroup-subtitle">Head over to the Glean developer documentation to work with the Glean SDK and APIs.</p>
-
-  <LandingPageDeveloperCards />
-</LandingPageCardGroup>
+    <Card title="Changelog" icon="shield-halved" iconType="solid" href="/documentation/policy-manager/overview">
+      Network security platform that enables interaction with firewalls from multiple vendors in a consistent and intuitive manne
+    </Card>
+  </CardGroup>
+</div>
 
