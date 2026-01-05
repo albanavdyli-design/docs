@@ -64,6 +64,7 @@
       {
         "tab": "API reference",
         "pages": [
+          "api-reference/test2",
           "api-reference/test",
           {
             "group": "API documentation",
