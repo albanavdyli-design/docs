@@ -30,76 +30,89 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-   "products": [
-    {
-      "product": "Homepage",
-      "icon": "grip",
-      "pages": [
-        "index"
-      ]
-    },
-    {
-      "product": "Kode OS Docs", 
-      "description": "Building Operating System",
-      "icon": "house-plus",
-      "tabs": [
-        {
-          "tab": "KODE OS Quickstart",
-          "groups": [
-            {
-              "group": "Quickstart",
-              "pages": [
-                "kode-os/Quickstart/quickstart"
-              ]
-            }
-          ]
-        },
-        {
-          "tab": "Sites & Dashboards",
-          "groups": [
-            {
-              "group": "KODE OS DASHBOARDS", 
-              "pages": [
-                "kode-os/sites-dashboards/quickstart"
-              ]
-            }
-          ]
-        },
-        {
-          "tab": "Building BI"
-        }, 
-        {
-          "tab": "Events"
-        },
-        {
-          "tab": "FTT & FDD",
-          "groups": [
-            {
-              "group": "Quickstart", 
-              "pages": [
-                "kode-os/FTT-FDD/quickstart"
-              ]
-            },
-            {
-              "group": "Functionality Test Tool"
-            }, 
-            {
-              "group": "Faul Detection & Diagnostics"
-            }
-          ]
-        }, 
-        {
-          "tab": "Mass Write"
-        }, 
-        {
-          "tab": "Schedules"
-        }
-      ]
-    },
-    {
-      "product": "myMSI"
-    }
-   ]
+    "products": [
+      {
+        "product": "Homepage",
+        "icon": "grip",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "product": "Kode OS Docs",
+        "icon": "house-plus",
+        "description": "Building Operating System",
+        "tabs": [
+          {
+            "tab": "Kode OS Modules",
+            "menu": [
+              {
+                "item": "Dashboards"
+              },
+              {
+                "item": "Sites"
+              }
+            ]
+          },
+          {
+            "tab": "KODE OS Quickstart",
+            "groups": [
+              {
+                "group": "Quickstart",
+                "pages": [
+                  "kode-os/Quickstart/quickstart"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Sites & Dashboards",
+            "groups": [
+              {
+                "group": "KODE OS DASHBOARDS",
+                "pages": [
+                  "kode-os/sites-dashboards/quickstart"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Building BI"
+          },
+          {
+            "tab": "Events"
+          },
+          {
+            "tab": "FTT & FDD",
+            "groups": [
+              {
+                "group": "Quickstart",
+                "pages": [
+                  "kode-os/FTT-FDD/quickstart"
+                ]
+              },
+              {
+                "group": "Functionality Test Tool",
+                "pages": []
+              },
+              {
+                "group": "Faul Detection & Diagnostics",
+                "pages": []
+              }
+            ]
+          },
+          {
+            "tab": "Mass Write"
+          },
+          {
+            "tab": "Schedules"
+          }
+        ]
+      },
+      {
+        "product": "myMSI"
+      }
+    ]
   },
   "logo": {
     "light": "/logo/kodelogo.png",
