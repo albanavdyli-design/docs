@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
-  "name": "Mint Starter Kit",
+  "name": "Kode Labs Documentation",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -11,8 +11,17 @@
   "navigation": {
    "products": [
     {
+      "product": "Home",
+      "pages": [
+        "index"
+      ]
+    },
+    {
       "product": "Kode OS", 
       "tabs": [
+        {
+          "tab": "KODE OS Quickstart"
+        },
         {
           "tab": "Sites & Dashboards",
           "groups": [
@@ -23,14 +32,40 @@
               ]
             }
           ]
+        },
+        {
+          "tab": "Building BI"
+        }, 
+        {
+          "tab": "FTT & FDD",
+          "groups": [
+            {
+              "group": "Quickstart", 
+              "pages": [
+                "kode-os/FTT-FDD/quickstart"
+              ]
+            },
+            {
+              "group": "Functionality Test Tool"
+            }, 
+            {
+              "group": "Faul Detection & Diagnostics"
+            }
+          ]
+        }, 
+        {
+          "tab": "Schedules"
+        }, 
+        {
+          "tab": "Events"
         }
       ]
     }
    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/kodelogo.png",
+    "dark": "/logo/kodelogo1.png"
   },
   "navbar": {
     "links": [
