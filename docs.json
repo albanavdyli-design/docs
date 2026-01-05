@@ -3,21 +3,26 @@
   "theme": "aspen",
   "name": "Kode Labs Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#1C4D8D",
+    "light": "#4988C4",
+    "dark": "#1C4D8D"
+  },
+  "icons": {
+    "library": "lucide"
   },
   "favicon": "/favicon.svg",
   "navigation": {
    "products": [
     {
-      "product": "Home",
+      "product": "Docs Homepage",
       "pages": [
         "index"
       ]
     },
     {
-      "product": "Kode OS", 
+      "product": "Kode OS Docs", 
+      "description": "Building Operating System",
+      "icon": "house-plus",
       "tabs": [
         {
           "tab": "KODE OS Quickstart"
@@ -60,6 +65,9 @@
           "tab": "Events"
         }
       ]
+    },
+    {
+      "product": "myMSI"
     }
    ]
   },

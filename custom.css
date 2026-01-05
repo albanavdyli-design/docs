@@ -1,0 +1,20 @@
+body, body * {
+    border-radius: 0 !important;
+}
+
+body *::before,
+body *::after {
+    border-radius: 0 !important;
+}
+
+/* Light mode logo */
+.nav-logo {
+  height: 38px !important;
+  width: auto !important;
+}
+
+/* Dark mode logo */
+.dark .nav-logo {
+  height: 48px !important;
+  width: auto !important;
+}
