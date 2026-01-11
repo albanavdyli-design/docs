@@ -2,118 +2,287 @@
 mode: "custom"
 ---
 
-export function openSearch() {
-  document.getElementById('search-bar-entry').click();
-}
+# Aspen Documentation
 
-export function openSearch() {
-  document.getElementById('search-bar-entry').click();
-}
+import React, { useState } from 'react';
+import { Icon } from '@/components/Icon';
+import { CardGroup } from '@/components/CardGroup';
 
-<div className="relative w-full flex items-center justify-center" style={{ height: '24rem', overflow: 'hidden'}}>
-  <div id="background-div" class="absolute inset-0" style={{backgroundImage: "url('https://mintlify-assets.b-cdn.net/attback.png')", backgroundSize: '100%', backgroundPosition: 'center', height: "24rem"}} />
+export const ProductCard = ({ img, href, title, description, model, type }) => {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group">
+      <div className="flex flex-col gap-4 rounded-xl md:p-1">
+        <div className="w-full h-32 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
+          <img
+            src={img}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            alt={title}
+            loading="lazy"
+          />
+        </div>
+        <div className="flex flex-col gap-3 pb-2">
+          <h2 className="text-md font-medium text-gray-900 dark:text-gray-200 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors mb-[-8px]">
+            {title}
+          </h2>
+          <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">
+            {description}
+          </p>
+          <div className="flex gap-2 mt-2 mb-1">
+            <span className="bg-gray-100 dark:bg-[#181817] text-gray-600 dark:text-white rounded-lg px-2 py-1 text-sm font-medium">
+              {model}
+            </span>
+            <span className="bg-primary-light dark:bg-primary-dark text-white rounded-lg px-2 py-1 text-sm font-medium">
+              {type}
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+};
 
-  <div style={{ position: 'absolute', textAlign: 'center', padding: '0 1rem', width: '90%'}}>
-    <div
-      className="text-white dark:text-gray-200"
-      style={{
-     fontWeight: '700',
-     fontSize: '50px',
-     margin: '0',
-    }}
-    >
-      Welcome to KODE Docs
+export const appCategories = [
+  {
+    id: 'machine-learning',
+    label: 'Machine Learning',
+    items: [
+      {
+        id: 'ai-model-hub',
+        title: 'AI Model Hub',
+        desc: 'Access pre-trained models and deploy custom AI solutions in seconds',
+        icon: 'https://mintlify-assets.b-cdn.net/tail-icon.svg',
+        image: {
+          light: 'https://mintlify-assets.b-cdn.net/aspen-home.svg',
+          dark: 'https://mintlify-assets.b-cdn.net/aspen-home.svg'
+        },
+        href: '#'
+      },
+      {
+        id: 'smart-training-pipeline',
+        title: 'Smart Training Pipeline',
+        desc: 'Enable developers to easily train and fine-tune AI models with your data',
+        icon: 'https://mintlify-assets.b-cdn.net/smart-light.svg',
+        image: {
+          light: 'https://mintlify-assets.b-cdn.net/aspen-home.svg',
+          dark: 'https://mintlify-assets.b-cdn.net/aspen-home.svg'
+        },
+        href: '#'
+      },
+      {
+        id: 'intellikit',
+        title: 'IntelliKit',
+        desc: 'Build beautiful AI-powered apps with React components and TypeScript utilities',
+        icon: 'https://mintlify-assets.b-cdn.net/broom-light.svg',
+        image: {
+          light: 'https://mintlify-assets.b-cdn.net/aspen-home.svg',
+          dark: 'https://mintlify-assets.b-cdn.net/aspen-home.svg'
+        },
+        href: '#'
+      },
+      {
+        id: 'neural-paymaster',
+        title: 'Neural Paymaster',
+        desc: 'Build custom cost-efficient AI experiences for your intelligent applications',
+        icon: 'https://mintlify-assets.b-cdn.net/neural-light.svg',
+        image: {
+          light: 'https://mintlify-assets.b-cdn.net/aspen-home.svg',
+          dark: 'https://mintlify-assets.b-cdn.net/aspen-home.svg'
+        },
+        href: '#'
+      }
+    ]
+  },
+  {
+    id: 'computer-vision',
+    label: 'Computer Vision',
+    items: [
+      {
+        id: 'vision-api',
+        title: 'Vision API',
+        desc: 'Build computer vision applications with ease',
+        icon: 'https://mintlify-assets.b-cdn.net/anchor-light.svg',
+        image: {
+          light: 'https://mintlify-assets.b-cdn.net/aspen-home.svg',
+          dark: 'https://mintlify-assets.b-cdn.net/aspen-home.svg'
+        },
+        href: '#'
+      }
+    ]
+  },
+  {
+    id: 'AI-agents',
+    label: 'AI Agents',
+    items: [
+      {
+        id: 'agent-tools',
+        title: 'Agent Tools',
+        desc: 'Tools for building AI agents',
+        icon: 'https://mintlify-assets.b-cdn.net/smart-light.svg',
+        image: {
+          light: 'https://mintlify-assets.b-cdn.net/aspen-home.svg',
+          dark: 'https://mintlify-assets.b-cdn.net/aspen-home.svg'
+        },
+        href: '#'
+      }
+    ]
+  },
+  {
+    id: 'neural-networks',
+    label: 'Neural Networks',
+    items: [
+      {
+        id: 'neural-networks',
+        title: 'Neural Networks',
+        desc: 'Customize your neural networks with ease',
+        icon: 'https://mintlify-assets.b-cdn.net/neural-light.svg',
+        image: {
+          light: 'https://mintlify-assets.b-cdn.net/aspen-home.svg',
+          dark: 'https://mintlify-assets.b-cdn.net/aspen-home.svg'
+        },
+        href: '#'
+      }
+    ]
+  },
+  {
+    id: 'training-platforms',
+    label: 'Training Platforms',
+    items: [
+      {
+        id: 'training-platform',
+        title: 'Training Platforms',
+        desc: 'Train your models with ease',
+        icon: 'https://mintlify-assets.b-cdn.net/neural-light.svg',
+        image: {
+          light: 'https://mintlify-assets.b-cdn.net/aspen-home.svg',
+          dark: 'https://mintlify-assets.b-cdn.net/aspen-home.svg'
+        },
+        href: '/data/introduction/welcome'
+      }
+    ]
+  }
+];
+
+export const ProductTiles = ({ categories, hideButtons = false }) => {
+  const [activeCategory, setActiveCategory] = useState(categories[0].id);
+  const [activeSubTab, setActiveSubTab] = useState(
+    categories[0].items[0]?.id ?? null
+  );
+
+  const currentCategory = categories.find(cat => cat.id === activeCategory);
+  const currentSub = currentCategory?.items.find(
+    item => item.id === activeSubTab
+  );
+
+  return (
+    <div className="not-prose space-y-6">
+      {!hideButtons && (
+        <div className="flex flex-wrap gap-2">
+          {categories.map(cat => (
+            <button
+              key={cat.id}
+              onClick={() => {
+                setActiveCategory(cat.id);
+                setActiveSubTab(cat.items[0]?.id ?? null);
+              }}
+              className={`px-4 py-2 text-sm rounded-full font-medium transition-colors ${
+                activeCategory === cat.id
+                  ? 'bg-[#0A0B0D] text-white dark:bg-white dark:text-[#0A0B0D]'
+                  : 'bg-gray-100 dark:bg-white/10 text-black dark:text-white'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div>
+        {currentCategory?.items?.length ? (
+          <div className="flex flex-col lg:flex-row gap-6 bg-gray-100 dark:bg-[#141414] rounded-2xl">
+            <div className="flex flex-col w-full lg:w-1/2 space-y-2 p-4">
+              {currentCategory.items.map(item => (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  onMouseOver={() => setActiveSubTab(item.id)}
+                  className={`flex items-start gap-1.5 px-5 py-3 rounded-2xl transition-all ${
+                    activeSubTab === item.id
+                      ? 'bg-white dark:bg-white/5'
+                      : ''
+                  }`}
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-8 h-8 mt-1 mr-3"
+                  />
+                  <div className="flex-1">
+                    <h3 className="font-medium text-base">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <Icon icon="chevron-right" size="14" />
+                </a>
+              ))}
+            </div>
+
+            <div className="w-full lg:w-1/2 p-4">
+              {currentSub?.image ? (
+                <>
+                  <img
+                    src={currentSub.image.light}
+                    className="block dark:hidden rounded-xl"
+                  />
+                  <img
+                    src={currentSub.image.dark}
+                    className="hidden dark:block rounded-xl"
+                  />
+                </>
+              ) : (
+                <p className="text-gray-400 p-8">No preview available</p>
+              )}
+            </div>
+          </div>
+        ) : (
+          <p className="text-sm text-gray-500">
+            No features available for this category.
+          </p>
+        )}
+      </div>
     </div>
+  );
+};
 
-    <p
-      className="prose text-white dark:prose-invert"
-      style={{
-      marginTop: '1rem',
-     fontWeight: '400',
-     fontSize: '16px',
-    }}
-    >
-      Manage buildings, the smart way. 
-    </p>
-
-    <div className="flex items-center justify-center" style={{ width: '100%' }}>
-      <button
-        type="button"
-        className="hidden w-full lg:flex items-center text-sm leading-6 py-1.5 pl-2.5 pr-3 shadow-sm text-gray-400 dark:text-white/50 bg-background-light dark:bg-background-dark dark:brightness-[1.1] dark:ring-1 dark:hover:brightness-[1.25] ring-1 ring-gray-400/20 hover:ring-gray-600/25 dark:ring-gray-600/30 dark:hover:ring-gray-500/30 focus:outline-primary border border-gray-100"
-        id="home-search-entry"
-        style={{
-      marginTop: '2rem',
-      width: '40%',
-      padding: '0.4rem',
-    }}
-        onClick={openSearch}
-      >
-        <svg
-          className="h-4 w-4 ml-1.5 flex-none bg-gray-500 hover:bg-gray-600 dark:bg-white/50 dark:hover:bg-white/70"
-          style={{
-        marginRight: '0.5rem',
-       maskImage:
-         'url("https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg")',
-       maskRepeat: 'no-repeat',
-       maskPosition: 'center center',
-      }}
-        />
-
-        Search or ask
-      </button>
-    </div>
-
-    <div className="flex items-center justify-center">
-      <a style={{ marginTop: '2rem' }} href="/documentation/usm-anywhere" className="text-white text-sm font-medium flex items-center">
-        Explore the docs
-
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline-block ml-1" viewBox="0 0 20 20" fill="currentColor">
-          <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-        </svg>
-      </a>
-    </div>
+export const Title = ({ children }) => (
+  <div className="text-gray-900 dark:text-gray-200 text-2xl tracking-tight">
+    {children}
   </div>
-</div>
+);
 
-<div
-  style={{
-  marginTop: '0rem',
-  marginBottom: '8rem',
-  maxWidth: '70rem',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  paddingLeft: '1.25rem',
-  paddingRight: '1.25rem'
-}}
->
-  <h2
-    className="text-gray-900 dark:text-gray-200 text-center"
-    style={{
-    marginTop: '2rem',
-    marginBottom: '1rem',
-    fontWeight: '300',
-    fontSize: '1.5rem'
-  }}
-  >
-    Learn how to get started with Kode 👍 <span className="text-primary dark:text-primary-light"></span>
-  </h2>
+export const Container = ({ children }) => (
+  <div className="px-4 lg:px-10 py-14">{children}</div>
+);
 
-  <CardGroup cols={4}>
-    <Card title="KODE OS" icon="house-plus" iconType="solid" href="/documentation/usm-anywhere">
-      Cloud-based security monitoring platform that unifies threat detection, incident response, and compliance across all environments
-    </Card>
+export default function DefaultPage() {
+  return (
+    <div className="px-5 divide-y divide-gray-100 dark:divide-white/10">
+      <Container>
+        <div className="max-w-4xl">
+          <h1 className="text-4xl">Aspen Documentation</h1>
+          <p className="mt-3 text-gray-600">
+            Explore our API & SDK references, demos, and guides for building
+            intelligent applications.
+          </p>
+        </div>
+      </Container>
 
-    <Card title="myMSI™" icon="server" iconType="solid" href="/documentation/usm-central">
-      Unified security monitoring console for MSPs and enterprises to manage multiple USM deployments, enabling centralized threat detection across cloud and on-prem environments
-    </Card>
-
-    <Card title="Launchpad" icon="shield-halved" iconType="solid" href="/documentation/tdr-for-gov">
-      FedRAMP-authorized threat detection platform for government, based on USM, deployed on AWS GovCloud with Moderate ATO
-    </Card>
-
-    <Card title="Changelog" icon="shield-halved" iconType="solid" href="/documentation/policy-manager/overview">
-      Network security platform that enables interaction with firewalls from multiple vendors in a consistent and intuitive manne
-    </Card>
-  </CardGroup>
-</div>
-
+      <Container>
+        <Title>Build AI Applications</Title>
+        <ProductTiles categories={appCategories} />
+      </Container>
+    </div>
+  );
+}
