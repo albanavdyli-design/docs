@@ -47,10 +47,22 @@
             "tab": "Kode OS Modules",
             "menu": [
               {
-                "item": "Dashboards"
+                "item": "Sites"
               },
               {
-                "item": "Sites"
+                "item": "Dashboards"
+              }, 
+              {
+                "item": "Building BI"
+              },
+              {
+                "item": "Events"
+              }, 
+              {
+                "item": "Functional Testing Tool (FTT)"
+              }, 
+              {
+                "item": "Faul Detection & Diagnostics (FDD)"
               }
             ]
           },
